@@ -1,0 +1,5 @@
+{
+  "sui.enabled" : "Unconsumable mode activated!",
+  "sui.disabled" : "Unconsumable mode disabled.",
+  "key.simpleunconsumableitems.activate" : "Toggle Unconsumable Mode"
+}

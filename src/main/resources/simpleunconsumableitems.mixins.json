@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.gkoliver.simpleunconsumableitems.core.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "simpleunconsumableitems.refmap.json",
+  "mixins": [
+    "ItemStackMixin"
+  ],
+  "client":[
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
