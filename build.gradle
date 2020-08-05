@@ -3,17 +3,23 @@ buildscript {
         maven { url = 'https://files.minecraftforge.net/maven' }
         jcenter()
         mavenCentral()
+        maven { url = 'https://dist.creeper.host/Sponge/maven' }
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
+mixin {
+    add sourceSets.main, "simpleunconsumableitems.refmap.json"
+}
 
-version = '1.0'
+version = '1.1'
 group = 'com.gkoliver.simple_unconsumable_items' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'simple_unconsumable_items'
 
@@ -146,3 +152,4 @@ publishing {
         }
     }
 }
+
