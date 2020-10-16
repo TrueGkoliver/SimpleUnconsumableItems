@@ -23,7 +23,7 @@ import java.util.Random;
 public class ItemStackMixin {
     //This is going to go into Simple Unbreakable Tools because why not lol
     //public boolean attemptDamageItem(int amount, Random rand, @Nullable ServerPlayerEntity damager) { return false; }
-    @Inject(method = "net.minecraft.item.ItemStack.shrink(I)V", at = @At("HEAD"), cancellable = true, remap=false)
+    @Inject(method = "net.minecraft.item.ItemStack.shrink(I)V", at = @At("HEAD"), cancellable = true)
     public void check(CallbackInfo ci) {
         if (Minecraft.getInstance().player!=null) {
             boolean dead = Minecraft.getInstance().player.getPersistentData().getBoolean(SwapModePacket.id);

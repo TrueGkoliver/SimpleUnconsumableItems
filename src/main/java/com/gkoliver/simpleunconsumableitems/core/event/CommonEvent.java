@@ -19,9 +19,7 @@ import sun.java2d.pipe.SpanShapeRenderer;
 public class CommonEvent {
     @SubscribeEvent
     public static void onInput(InputEvent.KeyInputEvent event) {
-        System.out.println("Got to line 73");
         if (Keybind.KEYBIND_ACTIVATE.isKeyDown()) {
-            System.out.println("No.");
             SimpleUnconsumableItems.handler.sendToServer(new SwapModePacket(Minecraft.getInstance().player.getUniqueID()));
         }
     }
